@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;500;700;800&family=Work+Sans&display=swap');
+
+/* --------------------------------------------------------------- */
+/* ---------------------------- Reset ---------------------------- */
+/* --------------------------------------------------------------- */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p{
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  /* min-height: 100%; */
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-image: url("../public/assests/background/BackGroundMobile.jpg");
+  font-family: 'JetBrains Mono', monospace !important;
+  backdrop-filter: blur(6px);
+  overflow-y: scroll;
+  background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+@media (min-width: 35rem) {
+  body{
+    overflow-y: hidden;
+  }
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar,
+.borders::-webkit-scrollbar,
+.container::-webkit-scrollbar  {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body,
+.borders,
+.container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+/* --------------------------------------------------------------- */
+/* ---------------------- Custom Properties ---------------------- */
+/* --------------------------------------------------------------- */
+
+:root{
+    /* ---- Font Size ---- */
+    --fs-900: clamp(3rem,4vw,4rem);
+    --fs-800: clamp(2.5rem,3vw,3rem);
+    --fs-700: 2.25rem;
+    --fs-600: 1.5rem;
+    --fs-400: clamp(1.125rem, 1vw ,1.25rem);
+    --fs-300: 1.125rem;
+    --fs-200: 1rem;
+    --fs-100: 0.875rem;
+    --fs-50 : 0.6875rem;
+}
+
+
+
+/* --------------------------------------------------------------- */
+/* -------------------------- Typography ------------------------- */
+/* --------------------------------------------------------------- */
+
+
+.fs-900{font-size: var(--fs-900);}
+.fs-800{font-size: var(--fs-800); line-height: 1.2;}
+.fs-700{font-size: var(--fs-700);}
+.fs-600{font-size: var(--fs-600);}
+.fs-500{font-size: var(--fs-500);}
+.fs-400{font-size: var(--fs-400);}
+.fs-300{font-size: var(--fs-300);}
+.fs-200{font-size: var(--fs-200);}
+.fs-100{font-size: var(--fs-300);}
+.fs-50{font-size: var(--fs-200);}
+
+.light{ font-weight: 300;}
+.medium{ font-weight: 500;}
+.bold{ font-weight: 700;}
+.extrabold{ font-weight: 800;}
+
+
+
+.ff-san { font-family: 'Work Sans', sans-serif; }
+
+.fc-white { color: #FFFFFF;}
+
+/* --------------------------------------------------------------- */
+/* ------------------------ Custom Classes ----------------------- */
+/* --------------------------------------------------------------- */
+
+.flex-row{
+  display: flex;
+}
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+}
+
+.button{
+  background-color: #3888FF;
+  border:none;
+  padding: 1rem 2rem;
+  width: fit-content;
+  border-radius: 10px;
+  margin-inline: auto;
+  transition-duration: 250ms;
+}
+
+.container{
+  height: 100vh;
+  padding: 1rem 1rem;
+}
+
+.borders {
+  height: 100vh;
+  border: none;
+  border-radius: 12px;
+  padding-bottom: 1rem;
+  overflow-y: scroll;
+}
+
+.title {
+  text-align: center;
+  padding: 1rem;
+}
+@media (min-width:35rem) {
+  .borders {
+    border: 1px solid #ffffff85;
+    height: 100%;
+  }
+  .wrapper {
+    flex-direction: row;
+    z-index: -10;
+  }
+  .container{
+    padding: 0.8rem;
+    width: 85%;
+  }
+}
+

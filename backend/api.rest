@@ -1,0 +1,138 @@
+GET localhost:8080/api/leaderboard
+RESPONSE_BODY: 
+[
+	{
+		"id": "2f6IA9TvMMeaBTqxY04F",
+		"team_name": "Highschool DXD",
+		"votes": "160"
+	},
+	{
+		"id": "39qwaXugYWir7mGgq6SJ",
+		"team_name": "BLOODY_MARY",
+		"votes": "200"
+	},
+	{
+		"id": "iMt8Wt9SJrYizeFpUTzf",
+		"team_name": "TeamX",
+		"votes": "150"
+	}
+]
+
+GET localhost:8080/api/users
+
+RESPONSE_BODY:
+[
+	{
+		"id": "E7C8L79DKvyooABOsNp1",
+		"name": "RandomGuy",
+		"team": "BLOODY_MARY"
+	},
+	{
+		"id": "mZv8418zJPZQQAmSE9WD",
+		"team": "TeamX",
+		"name": "Ashu"
+	},
+	{
+		"id": "ntSvC3r4YaPI8iRIDZl5",
+		"team": "Highschool DXD",
+		"name": "Sahil"
+	}
+]
+
+POST localhost:8080/api/data
+
+REQUEST_BODY: 
+{
+	"collection_name":"ip",
+	"data":{
+		"ip":"117.198.102.157"
+	}	
+}
+
+RESPONSE_BODY:
+{
+	"message": "Data Added"
+}
+
+POST localhost:8080/api/images/generations
+
+REQUEST_BODY:
+{
+  "prompt": "A cute baby sea otter"
+}
+RESPONSE_BODY:
+
+{
+	"images": {
+		"created": 1670622088,
+		"data": [
+			{
+				"url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-uEDvbcGG5dtIkyReNQqG2ckh/user-hDvCrfaWvhXPKCcfkEtAY68y/img-fUYjezM7HGKyqw0qqPctcKCk.png?st=2022-12-09T20%3A41%3A28Z&se=2022-12-09T22%3A41%3A28Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2022-12-09T18%3A24%3A07Z&ske=2022-12-10T18%3A24%3A07Z&sks=b&skv=2021-08-06&sig=JA6QwbNyhy61ndEjRn2ycBm/pM6ZJ7h2oRa01EbN0rM%3D"
+			},
+			{
+				"url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-uEDvbcGG5dtIkyReNQqG2ckh/user-hDvCrfaWvhXPKCcfkEtAY68y/img-vfk5v3Na94HSRAC18HQyj4da.png?st=2022-12-09T20%3A41%3A28Z&se=2022-12-09T22%3A41%3A28Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2022-12-09T18%3A24%3A07Z&ske=2022-12-10T18%3A24%3A07Z&sks=b&skv=2021-08-06&sig=vVLqPOjq16PDrEZqWbSva9p3Te4x72z2JpBUKP/XKHs%3D"
+			},
+			{
+				"url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-uEDvbcGG5dtIkyReNQqG2ckh/user-hDvCrfaWvhXPKCcfkEtAY68y/img-I8ymmA8y7ojT8a7KYH43KxBf.png?st=2022-12-09T20%3A41%3A28Z&se=2022-12-09T22%3A41%3A28Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2022-12-09T18%3A24%3A07Z&ske=2022-12-10T18%3A24%3A07Z&sks=b&skv=2021-08-06&sig=y/U7Yv0YnHQCw/o3YjYBgjf7N7e0UrKIgW4r5%2BeWHbI%3D"
+			},
+			{
+				"url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-uEDvbcGG5dtIkyReNQqG2ckh/user-hDvCrfaWvhXPKCcfkEtAY68y/img-vySo8KW5N7r63b93R5z3Ojdz.png?st=2022-12-09T20%3A41%3A28Z&se=2022-12-09T22%3A41%3A28Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2022-12-09T18%3A24%3A07Z&ske=2022-12-10T18%3A24%3A07Z&sks=b&skv=2021-08-06&sig=2MZZ72NWRJjm5vxaa%2BLXfii3HW2lb6YuK/dvihyvGlA%3D"
+			}
+		]
+	}
+}
+
+POST localhost:8080/api/polling
+
+REQUEST_BODY:
+{
+	"ip":"117.198.102.157"
+}
+RESPONSE_BODY:
+
+{
+	"message": "Polling Ended",
+	"isPollingStarted": false
+}
+
+
+POST localhost:8080/api/register
+
+REQUEST_BODY:
+
+{
+	"name":"Testing",
+	"team_name":"XYZ"
+}
+
+RESPONSE_BODY:
+
+{
+	"Success": true
+}
+
+POST localhost:8080/api/submission
+
+REQUEST_BODY:
+{
+	"id":"YT54xuJrgkUk6UbeifIm",
+	"img":"https://oaidalleapiprodscus.blob.core.windows.net/private/org-uEDvbcGG5dtIkyReNQqG2ckh/user-hDvCrfaWvhXPKCcfkEtAY68y/img-6lUAiNpFqMN9p32JNsqpAv5b.png?st=2022-12-09T17%3A10%3A41Z&se=2022-12-09T19%3A10%3A41Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2022-12-09T18%3A10%3A41Z&ske=2022-12-10T18%3A10%3A41Z&sks=b&skv=2021-08-06&sig=6UGgi91DsRXkmDHhjfu7pkmu2c4bt/6NdqOXBFur9wo%3D"
+}
+
+RESPONSE_BODY:
+{
+	"message": "Image Successfully Uploaded."
+}
+
+POST localhost:8080/api/votes
+
+REQUEST_BODY:
+{
+		"id":"2pRsDVvU8mf9N3Zue5zV",
+		"ip":"117.198.102.157"
+}
+
+RESPONSE_BODY:
+{
+	"message": "Successfully Upvoted xyz"
+}

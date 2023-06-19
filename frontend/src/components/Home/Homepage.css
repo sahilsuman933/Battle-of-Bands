@@ -1,0 +1,14 @@
+.home {
+    z-index: -10;
+    gap: 1.5rem;
+}
+
+@media (min-width:35rem) {
+    .home{
+        background-color: #00000025;
+        padding: clamp(1rem, 10vw , 9rem);
+        gap: 3rem;
+        border-radius: 15px;
+        
+    }
+}
