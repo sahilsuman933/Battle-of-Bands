@@ -23,8 +23,7 @@ function GenerateImg() {
   }
 
   const handleSubmit = (selectedURL, id) => {
-    const url =
-      `${process.env.REACT_APP_URL}/api/submission`;
+    const url = `${process.env.REACT_APP_URL}/api/submission`;
     axios
       .post(url, {
         id,
@@ -37,8 +36,7 @@ function GenerateImg() {
 
   const generateImg = async () => {
     setIsLoading("");
-    const url =
-    `${process.env.REACT_APP_URL}/api/images/generations`;
+    const url = `${process.env.REACT_APP_URL}/api/images/generations`;
     await axios
       .post(url, {
         prompt: info.prompt,
@@ -48,7 +46,7 @@ function GenerateImg() {
           console.log(res.data.images.data);
           setImgURL(res.data.images.data);
         } else {
-          console.log("This Prompt Violate terms and condition of Dall e");
+          console.log(res.data.error_message);
         }
       });
 

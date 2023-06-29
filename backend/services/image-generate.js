@@ -22,7 +22,7 @@ const ImageGenerate = {
     } catch (err) {
       return {
         error: true,
-        error_message: err.response.data.error.code,
+        error_message: err.response,
       };
     }
   },

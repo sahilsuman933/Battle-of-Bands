@@ -8,7 +8,7 @@ function App() {
   return (
     <Router className="App">
       <Routes>
-        <Route exact path="/Prompt-Battle/" element={<Homepage />} />
+        <Route path="/Prompt-Battle" element={<Homepage />} />
         <Route
           exact
           path="/Prompt-Battle/GenerateImage/:teamId"

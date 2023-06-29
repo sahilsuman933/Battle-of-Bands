@@ -8,13 +8,12 @@ function Leaderboard() {
 
   const getCardData = () => {
     axios
-      .get(
-        `${process.env.REACT_APP_URL}/api/leaderboard`
-      )
+      .get(`${process.env.REACT_APP_URL}/api/leaderboard`)
       .then((response) => {
-
-        const sortResponse = response.data.sort(
-          (teamA, teamB) => (teamA.votes < teamB.votes) ? 1 : (teamA.votes > teamB.votes) ? -1 : 0);
+        console.log(response.data);
+        const sortResponse = response.data.sort((teamA, teamB) =>
+          teamA.votes < teamB.votes ? 1 : teamA.votes > teamB.votes ? -1 : 0
+        );
         setCardData(sortResponse);
       })
 

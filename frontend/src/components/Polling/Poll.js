@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from "react";
 import "./Poll.css";
 import axios from "axios";
@@ -10,27 +8,25 @@ export default function Poll() {
   const [counter, setCounter] = useState([]);
   const [ip, setIP] = useState();
   const [isuserVoted, setUserVoted] = useState(false);
-  
+
   const getData = async () => {
-    const res = await axios.get('https://geolocation-db.com/json/');
+    const res = await axios.get("https://geolocation-db.com/json/");
     console.log(res.data);
-      setIP(res.data.IPv4);
-      await axios.post(
-        `${process.env.REACT_APP_URL}/api/polling`,
-          { ip: res.data.IPv4 }
-      ).then(function (response) {
-          setData(response.data);
-          setCounter(response.data.time);
-        })
-        .catch(function (error) {
-          console.error(error);
-        });
+    setIP(res.data.IPv4);
+    await axios
+      .post(`${process.env.REACT_APP_URL}/api/polling`, { ip: res.data.IPv4 })
+      .then(function (response) {
+        setData(response.data);
+        setCounter(response.data.time);
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
   };
   const upVote = (Userid) => {
     setUserVoted(true);
-    axios.post(
-      `${process.env.REACT_APP_URL}/api/votes`,
-      { id: Userid, ip })
+    axios
+      .post(`${process.env.REACT_APP_URL}/api/votes`, { id: Userid, ip })
       .then(function (response) {
         console.log(response.data);
       })

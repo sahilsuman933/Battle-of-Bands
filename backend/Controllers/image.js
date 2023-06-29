@@ -7,7 +7,9 @@ const image = {
     const { prompt } = req.body;
     const image = await ImageGenerate.generateImage(prompt);
 
-    res.send(image);
+    res.send({
+      images: image.images,
+    });
   },
   async submission(req, res) {
     const { id, img } = req.body;
