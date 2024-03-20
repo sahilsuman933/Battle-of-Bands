@@ -158,7 +158,7 @@ export default function Navbar(){
     return(
         <div className='navBar flex-col'>
             <div className='navBar-top flex-col'>
-                <Link to='/Prompt-Battle/'>
+                <Link to='/'>
                     <h1 className='navBar-title fc-white fs-400 bold'>
                         _prompt battle
                     </h1>
@@ -172,7 +172,7 @@ export default function Navbar(){
                 </button>
             </div>
             <div style={hamB} className='navBar-hamMenu navBar-iconTray flex-col'>
-                    <Link to='/Prompt-Battle/'>
+                    <Link to='/'>
                         <img className='navIcons' style={{ 
                                 width:"30px",
                                 height:"30px"
